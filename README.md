@@ -11,9 +11,9 @@
 
 -To run this analysis with the machine learning scripts provided you will need to load in just the singular data set from the folder and remove rows with N/A values which is done within the script provided. The only step you need to perform before running the machine learning scripts is to test the variable inflation factor to determine which variables in include in the analysis, you want a vif less than 10.
 
-## ZIP Level
-- This folder contains a data set and performance script. 
-- In this data set all metropolitan ZIP Codes as assigned by RUCA are used. This sample includes 440 of the 808 ZIP Codes in North Carolina and includes a total population of 7,735,552 with 2,057,665 of those being within our study age of 5 - 24 years old.
-- The performance script will use thwe data set as well as the .rds files you created from the machine learning scripts to asses their performance on the training and test data.
+## Determine Model Performance
+- In the City_Level folder is a script called R_Performance_Cities, this script will read in the .rds files and calculate train and test RMSE/MAE, variable importance plots, and plot a daily distribution of predicted and observed outcomes in a time series.
+- This aproach will help you determine the top performing model based on having the lowest RMSE and MAE value
 
--To run this analysis with the machine learning scripts provided you will need to load in just the singular data set from the folder and remove rows with N/A values which is done within the script provided. The only step you need to perform before running the machine learning scripts is to test the variable inflation factor to determine which variables in include in the analysis, you want a vif less than 10.
+## Evaluation of Developed Prediction Model Variables
+- In the SHAP_plot folder is a SHAP file. The goal of calculating your models SHAP values if to give you information on how nonlinear variables contribute to the prediction of the model. This file will take your .rds file and calculate the SHAP values and create a SHAP summary plot of your optimal variables.
